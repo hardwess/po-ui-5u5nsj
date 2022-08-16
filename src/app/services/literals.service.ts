@@ -6,23 +6,23 @@ import { literalsPtBR } from './../i18n/classificador-PtBR';
 import { literalsEnUS } from './../i18n/classificador-EnUS';
 import { literalsEsES } from './../i18n/classificador-EsES';
 import { literalsRuRU } from './../i18n/classificador-RuRU';
-import { LiteralsWords } from 'src/app/i18n/literals.model';
+import { LiteralsWords } from './../i18n/literals.model';
 
 export const i18nConfig: PoI18nConfig = {
-    default: {
-      language: 'pt-BR',
-      context: 'general',
-      cache: true
+  default: {
+    language: 'pt-BR',
+    context: 'general',
+    cache: true,
+  },
+  contexts: {
+    general: {
+      'pt-BR': literalsPtBR,
+      'en-US': literalsEnUS,
+      'es-ES': literalsEsES,
+      'ru-RU': literalsRuRU,
     },
-    contexts: {
-      general: {
-        'pt-BR': literalsPtBR,
-        'en-US': literalsEnUS,
-        'es-ES': literalsEsES,
-        'ru-RU': literalsRuRU
-      }
-    }
-  };
+  },
+};
 
 @Injectable()
 export class LiteralsService {
@@ -42,12 +42,10 @@ export class LiteralsService {
       this.language = 'ru-RU';
     }
 
-  thfI18nService.getLiterals({ language: this.language })
-
-
+    thfI18nService.getLiterals({ language: this.language });
   }
 
-  getLiteralModule(): LiteralsWords  {
+  getLiteralModule(): LiteralsWords {
     return this.literals;
-  };
+  }
 }

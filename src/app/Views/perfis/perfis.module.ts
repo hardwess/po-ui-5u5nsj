@@ -9,7 +9,12 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { ParticipantesComponent } from './participantes/participantes.component';
 import { OperacaoComponent } from './operacao/operacao.component';
 import { OridestComponent } from './oridest/oridest.component';
-import { PoGridModule, PoContainerModule, PoInfoModule, PoI18nConfig } from '@po-ui/ng-components';
+import {
+  PoGridModule,
+  PoContainerModule,
+  PoInfoModule,
+  PoI18nConfig,
+} from '@po-ui/ng-components';
 import { PoFieldModule } from '@po-ui/ng-components';
 import { PoIconModule } from '@po-ui/ng-components';
 import { PoButtonModule } from '@po-ui/ng-components';
@@ -17,23 +22,22 @@ import { PoPopupModule } from '@po-ui/ng-components';
 import { PoModalModule } from '@po-ui/ng-components';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PoListViewModule } from '@po-ui/ng-components';
-import { literalsPtBR } from 'src/app/i18n/classificador-PtBR';
+import { literalsPtBR } from './../../i18n/classificador-PtBR';
 import { HttpClientModule } from '@angular/common/http';
-
 
 const i18nConfig: PoI18nConfig = {
   default: {
     language: 'pt-BR',
     context: 'general',
-    cache: true
+    cache: true,
   },
   contexts: {
     'pt-BR': literalsPtBR,
     'ru-RU': literalsRuRU,
     'en-US': literalsEnUS,
-    'es-ES': literalsEsES
-  }
-}
+    'es-ES': literalsEsES,
+  },
+};
 
 @NgModule({
   declarations: [
@@ -41,7 +45,7 @@ const i18nConfig: PoI18nConfig = {
     ProdutosComponent,
     ParticipantesComponent,
     OperacaoComponent,
-    OridestComponent
+    OridestComponent,
   ],
   imports: [
     CommonModule,
@@ -55,9 +59,8 @@ const i18nConfig: PoI18nConfig = {
     BrowserAnimationsModule,
     PoListViewModule,
     PoInfoModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  exports:[
-  ]
+  exports: [],
 })
-export class PerfisModule { }
+export class PerfisModule {}
