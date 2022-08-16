@@ -1,0 +1,10 @@
+h1, p{
+  margin: 20px 250px 30px;
+  color:black;
+  width: 50%;
+}
+
+.grid{
+  margin: 30px 250px;
+  width: 80%;
+}

@@ -1,0 +1,65 @@
+<p>Selecione um ou mais perfis de Origem x Destino que deseja enviar para o Classificador:</p>
+  <div class="po-row">
+
+    <div class="po-xl-7 po-lg-7 po-md-7 po-sm-7"></div>
+    <div class="po-xl-3 po-lg-3 po-md-3 po-sm-3">
+        <po-input
+          p-placeholder="Pesquisar"
+          p-icon="po-icon po-icon-search"
+          p-clean="true"
+        >
+
+        </po-input>
+    </div>
+    <div class="po-xl-2 po-lg-2 po-md-2 po-sm-2">
+        <po-button
+          p-label="Ver Filtros">
+        </po-button>
+    </div>
+
+  </div>
+<div class="grid">
+  <po-grid
+      [p-columns]="aCabGrid">
+  </po-grid>
+</div>
+
+<footer>
+  <div class="po-row">
+    <div class="po-xl-8 po-lg-8 po-md-8 po-sm-8"></div>
+    <div class="po-xl-2 po-lg-2 po-md-2 po-sm-2"></div>
+    <div class="po-xl-2 po-lg-2 po-md-2 po-sm-2">
+      <po-button
+        p-label="Pré-visualização"
+        (p-click)="modalPo.open()">
+      </po-button>
+    </div>
+  </div>
+</footer>
+
+<po-modal #modalPo
+  [p-click-out]="true"
+  [p-hide-close]="true"
+  p-size="lg"
+  p-title="Dados do cenário">
+
+  <po-list-view
+    [p-hide-select-all]="true"
+    [p-items]="createItens()">
+
+    <ng-template p-list-view-content-template let-item>
+      <div class="po-row">
+        <po-info class="po-md-12" p-label="Origem"                [p-value]="item.origem"></po-info>
+        <po-info class="po-md-12" p-label="Produto"               [p-value]="item.produto"></po-info>
+        <po-info class="po-md-12" p-label="Participante"          [p-value]="item.participante"></po-info>
+        <po-info class="po-md-12" p-label="Operação"              [p-value]="item.operacao"></po-info>
+        <po-info class="po-md-12" p-label="Finalidade"            [p-value]="item.finalidade"></po-info>
+        <po-info class="po-md-12" p-label="Uf Origem x Uf Destino"[p-value]="item.ufxuf"></po-info>
+      </div>
+    </ng-template>
+
+</po-list-view>
+
+</po-modal>
+
+

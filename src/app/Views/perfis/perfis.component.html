@@ -1,0 +1,49 @@
+<h1>{{cTitle}}</h1>
+<br>
+<p>Esses perfis fazem parte da composição que será enviado para o Classificador, para posteriormente serem usados na Regras.</p>
+<br><br><br>
+<div class="po-row">
+  <div class="po-xl-2 po-lg-2 po-md-2 po-sm-2"></div>
+    <div class="po-xl-10 po-lg-10 po-md-10 po-sm-10">
+    <!--
+      <po-stepper>
+      <po-step p-label="Empresa" (p-change-step)="origemOnClick()"></po-step>
+      <po-step p-label="Produto" (p-change-step)="produtoOnClick()"></po-step>
+      <po-step p-label="Participante" (p-change-step)="participanteOnClick()"></po-step>
+      <po-step p-label="Operação" (p-change-step)="operacaoOnClick()"></po-step>
+      <po-step p-label="Origem x Destino" (p-change-step)="oridestOnClick()"></po-step>
+    </po-stepper>
+      -->
+      <po-tabs [p-small]="true">
+        <po-tab
+            [p-active]="true"
+            p-label="Empresa"
+            (p-click)="origemOnClick()">
+        </po-tab>
+        <po-tab
+            [p-active]="lProduto"
+            p-label="Produto"
+            (p-click)="produtoOnClick()">
+        </po-tab>
+        <po-tab
+            [p-active]="lParticipante"
+            p-label="Participante"
+            (p-click)="participanteOnClick()">
+        </po-tab>
+        <po-tab
+            [p-active]="lOperacao"
+            p-label="Operação"
+            (p-click)="operacaoOnClick()">
+        </po-tab>
+        <po-tab
+            [p-active]="lOridest"
+            p-label="Origem x Destino"
+            (p-click)="oridestOnClick()">
+        </po-tab>
+      </po-tabs>
+
+    </div>
+</div>
+<router-outlet></router-outlet>
+
+

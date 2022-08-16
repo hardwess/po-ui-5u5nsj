@@ -1,0 +1,42 @@
+<h1>{{ title }}</h1>
+<br><br>
+<p>Configure as opções abaixo para que a aprovação seja automático ou manual, essas configurações serão aplicadas para as regras</p>
+<br><br>
+
+
+<div class="config">
+    <div class="conteiner" #radioum>
+      <po-radio-group
+        [p-auto-focus]="true"
+        name="radioPorNcm"
+        p-label="Integração de Regras"
+        [p-options]="languageOptions"
+        (p-change)="putParam($event,1)"
+        >
+      </po-radio-group>
+      <po-popover
+        [p-target]="radioum"
+        p-trigger="hover"
+        p-position="bottom">
+        <h3>Define se todas as regras <br> serão integradas com o sistema <br> automaticamente</h3>
+      </po-popover>
+    </div>
+    <div class="conteiner" #radiodois>
+      <po-radio-group
+        [p-optional]="true"
+        name="radioPorNcm"
+        p-label="Integração de Regras por NCM"
+        [p-options]="languageOptions"
+        (p-change)="putParam($event,2)"
+        >
+      </po-radio-group>
+      <po-popover
+        [p-target]="radiodois"
+        p-trigger="hover"
+        p-position="bottom">
+        <h3>Define se as regras por NCM<br> serão integradas com o sistema <br> automaticamente</h3>
+      </po-popover>
+    </div>
+</div>
+
+

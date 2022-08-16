@@ -1,0 +1,8 @@
+{
+  "name": "PROTHEUS",
+  "versionAPI": "",
+  "appVersion": "0.1.6",
+  "productLine": "Protheus",
+  "restEntryPoint": "rest",
+  "serverBackend": "/"
+}

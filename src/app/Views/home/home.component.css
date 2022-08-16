@@ -1,0 +1,39 @@
+h1{
+  margin-top: 15px;
+  margin-left: 250px;
+  width: calc(100% - 275px);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  color: #232b2c
+}
+
+.image-home{
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 550px;
+}
+
+.txt-intro{
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+  background-color: red;
+  height: 550px;
+}
+
+.button-home-perfil{
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+  background-color: grey;
+}
+
+.text-home{
+  padding: 30px;
+}
+
+.img-home img{
+  padding: 0px;
+  width: 90%;
+}

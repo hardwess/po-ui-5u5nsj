@@ -1,0 +1,22 @@
+
+*{
+  margin: 0 auto;
+}
+
+.login_po{
+  width: 350px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.senha_po{
+  width: 350px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.btn_login{
+  padding: auto;
+  width: 200px;
+  height: 80px;
+}

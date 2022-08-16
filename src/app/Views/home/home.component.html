@@ -1,0 +1,38 @@
+<h1>Olá, {{cUSer}}!</h1>
+<router-outlet></router-outlet>
+
+<div class="po-row">
+  <div class="po-xl-2 po-lg-2 po-md-2 po-sm-2"></div>
+
+    <div class="po-xl-5 po-lg-5 po-md-5 po-sm-5">
+
+        <div class="img-home">
+          <img src="./assets/images/home.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="po-xl-5 po-lg-5 po-md-5 po-sm-5">
+      <div class="text-home">
+        <p>Para criação de regras tributárias para o Configurador de Tributos, você precisará enviar os
+          seguintes perfis de informações:</p>
+        <br>
+        <p><b>1 - Origem</b></p><br>
+        <p><b>2 - Produto</b></p><br>
+        <p><b>3 - Participante</b></p><br>
+        <p><b>4 - Operação</b></p><br>
+        <p><b>5 - Origem x Destino</b></p><br>
+        <p>Após o envio dessas informações, será possível visualizar no <b>Monitor de cenários</b>, os cenários enviados
+          e suas respectivas mensagens.<br>
+          O Classificador retornará com as regras para que você possa validar.<br>
+          Essa validação será na rotina de <b>Regras</b></p><br><br>
+
+        <po-button
+          [p-label]="cString"
+          (p-click)="perfisRoute()"
+        ></po-button>
+      </div>
+    </div>
+
+</div>
+

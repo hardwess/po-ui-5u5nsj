@@ -1,0 +1,18 @@
+<h1>{{cTitleMonitor}}</h1>
+<br><br>
+<p>O envio dos perfis para o Classificador e suas mensagens, serão mostradas no Monitor abaixo.</p>
+<br>
+<po-loading-overlay [hidden]="isLoading" p-text="Carregando..."></po-loading-overlay>
+
+<po-container  [p-height]="100"></po-container>
+
+<div class="grid">
+  <po-grid
+      [p-columns]="aColumns"
+      [p-data]="aItens">
+  </po-grid>
+</div>
+
+
+
+
